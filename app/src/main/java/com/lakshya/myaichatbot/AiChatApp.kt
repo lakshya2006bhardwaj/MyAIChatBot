@@ -26,11 +26,9 @@ class AiChatApp: Application(), Application.ActivityLifecycleCallbacks, DefaultL
         currentActivity?.let { appOpenAdManager.showAdIfAvailable(it) }
     }
 
-    // Inner class handling the specific AdMob mechanics
     private inner class AppOpenAdManager {
         private var appOpenAd: AppOpenAd? = null
         private var isLoadingAd = false
-        // Google's official Test Ad Unit ID for App Open Ads
         private val adUnitId = "ca-app-pub-3940256099942544/9257391924"
 
         fun loadAd() {
